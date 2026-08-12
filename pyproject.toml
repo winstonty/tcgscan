@@ -1,0 +1,31 @@
+[project]
+name = "tcgscan"
+version = "0.1.0"
+description = "A small CNN classifier for Pokemon trading cards"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pillow>=10",
+    "torch>=2.5",
+    "torchvision>=0.20",
+]
+
+[project.scripts]
+tcgscan = "tcgscan.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tcgscan"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+

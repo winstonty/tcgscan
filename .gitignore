@@ -1,3 +1,9 @@
 #ignore files from being uploaded to the repo here
 
+archive.zip
 /data/
+.DS_Store
+.venv/
+__pycache__/
+.pytest_cache/
+models/
