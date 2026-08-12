@@ -1,1 +1,1 @@
-# pokescan
+# TCGScan
